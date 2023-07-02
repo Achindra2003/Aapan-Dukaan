@@ -30,6 +30,8 @@ h2,h4,p{
 }
 
 #bottom-section{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 55%;
   color: white;
@@ -38,9 +40,8 @@ h2,h4,p{
 #bottom-left, #bottom-right{
   width: 100%;
   height: 100%;
-  display: inline-block;
-  vertical-align: top;
   padding: 35px;
+  flex-basis: 50%;
 }
 
 #bottom-left{
@@ -56,7 +57,13 @@ h2,h4,p{
 
 #bottom-left p {
   font-size: 0.8rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+#price-container{
+  display: flex;  
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 #price {
@@ -64,14 +71,7 @@ h2,h4,p{
   font-size: 1.35rem;
 }
 
-#price-frequency, #price {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
 #price-frequency {
-  position: relative;
-  top: -3px;
   font-size: 0.8rem;
   opacity: 0.7;
   margin-left: 5px;
@@ -95,7 +95,7 @@ button{
   color: white;
   background-color: #df32be;
   border: none;
-  padding: 13px;
+  padding: 12px;
   width: 100%;
   border-radius: 5px;
   font-size: 0.75rem;
@@ -115,12 +115,12 @@ ul {
   opacity: 0.8;
 }
 
-@media (min-width: 576px){
+@media (min-width: 720px){
   #card-container{
     height: 450px;
     width: 670px;
   }
-  #bottom-right, #bottom-left{
-    width: 50%;
+  #bottom-section{
+    flex-direction: row;
   }
 }
